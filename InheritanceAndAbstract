@@ -1,0 +1,159 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM1EVbKbmuPYqUv+M0o7FTu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sharma1saransh/python/blob/main/InheritanceAndAbstract\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8dQ-yjgIBdPl",
+        "outputId": "6b5d8744-7e8c-4d05-99cc-9694d8e9aecf"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "i am inside a\n",
+            "show1 of A\n",
+            "show 2 of A\n",
+            "i am inside a\n",
+            "i am inside b\n",
+            "show1 of A\n",
+            "show 2 of A\n",
+            "i am inside c\n",
+            "show1 of A\n"
+          ]
+        }
+      ],
+      "source": [
+        "class A:\n",
+        "    def __init__(self):\n",
+        "       print(\"i am inside a\")\n",
+        "    def showA1(self):\n",
+        "       print(\"show1 of A\")\n",
+        "    def showA2(self):\n",
+        "       print(\"show 2 of A\")\n",
+        "a1=A()\n",
+        "a1.showA1()\n",
+        "a1.showA2()\n",
+        "\n",
+        "class B(A):\n",
+        "    def __init__(self):\n",
+        "       super().__init__()\n",
+        "       print(\"i am inside b\")\n",
+        "    def show1(self):\n",
+        "       super().show1()\n",
+        "       print(\"show1 of b\")\n",
+        "    def show2(self):\n",
+        "       super().show2()\n",
+        "       print(\"show 2 of b\")\n",
+        "b1=B()\n",
+        "b1.showA1()\n",
+        "b1.showA2()\n",
+        "\n",
+        "class C(B):\n",
+        "    def __init__(self):\n",
+        "\n",
+        "       print(\"i am inside c\")\n",
+        "    def showc1(self):\n",
+        "\n",
+        "       print(\"show1 of c\")\n",
+        "    def showc2(self):\n",
+        "\n",
+        "       print(\"show 2 of c\")\n",
+        "c1=C()\n",
+        "c1.showA1()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class DivisibleByEleven:\n",
+        "  def __init__(self,n):\n",
+        "     self.n=n\n",
+        "  def Generate_divisble_by_eleven(self):\n",
+        "     for num in range(self.n+1):\n",
+        "       if num%11==0:\n",
+        "          print(num)"
+      ],
+      "metadata": {
+        "id": "u0rCp4G2BgmW"
+      },
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Fruit:\n",
+        " def taste(self):\n",
+        " def color(self):\n",
+        " def richness(self):\n",
+        "class Mango(Fruit):\n",
+        " def taste(self):\n",
+        "  print(\"mangoes are sweet\")\n",
+        " def color(self):\n",
+        "  print(\"mangoes are yellow\")\n",
+        " def richness(self):\n",
+        "  print(\"mangoes are rich in b12\")\n",
+        "\n",
+        "class Papaya:\n",
+        " def taste(self):\n",
+        "  print(\"taste of papaya is magical\")\n",
+        " def color(self):\n",
+        "  print(\"narangi\")\n",
+        "\n",
+        "p1=Papaya()\n",
+        "p1.richness\n",
+        "p1.taste"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 159
+        },
+        "id": "inWiDbCNCzDb",
+        "outputId": "419986e8-758c-463c-f4a4-81ad8654631c"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "expected an indented block after function definition on line 2 (<ipython-input-8-f4416104b96b>, line 3)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-8-f4416104b96b>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    def color(self):\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block after function definition on line 2\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
